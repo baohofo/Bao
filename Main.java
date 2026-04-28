@@ -209,6 +209,15 @@ public class Main {
         }
         return true;
     }
+    public static boolean sohoanthien(int n){
+        int tong = 0;
+        for (int i = 1 ; i<n;i++){
+            if(n%i==0){
+                tong +=i;
+            }
+        }
+        return tong == n;
+    }
 
     public static void lietke(int n) {
         for (int i = 2; i < n; i++) {
@@ -287,21 +296,7 @@ public class Main {
         return k;
     }
 
-    public static void demsochanle(int n){
-        int chan = 0, le = 0;
-        int goc = n;
 
-        if (n==0)
-            chan = 1;
-        while(n>0){
-            int so = n % 10;
-            if(so%2==0){
-                chan++;
-            } else
-                le++;
-        }
-        n=n/10;
-    }
 
     public static void tinhgiathuaphanso(int n){
         double s = 0;
@@ -311,4 +306,59 @@ public class Main {
             s += 1.0/p;
         }
     }
+
+    public static void sochanhayle(){
+        int a = -1;
+        System.out.println("Nhap vo N: ");
+        a= sc.nextInt();
+            if(a % 2 == 0){
+                System.out.println("So chan");
+            } else
+                System.out.println("So le");
+
+    }
+
+    public static void timsolonnhat(){
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        if(a>=b && a>=c) {
+            System.out.println("So lon nhat la: " + a);
+        } else if (b>=a && b>=c){
+            System.out.println("So lon nhat la: "+ b);
+            }
+        else
+            System.out.println("So lon nhat la: "+c);
+    }
+
+    public static void tinhn(int n){
+        long s = 0;
+        for (int i = 1; i<=n;i++){
+            s +=i;
+        }
+        System.out.println("tong la: "+ s);
+    }
+
+    public static void demchuso(int n){
+        int dem = 0;
+        int tam = n;
+        if(n==0)
+            dem = 1;
+
+        while(n>0){
+            n /= 10;
+            dem++;
+        }
+    }
+
+    public static void bangcuuchuong(int n){
+        int tong = 0;
+        for (int i = 1; i<=10; i++){
+            tong = n*i;
+            System.out.println(" " + n + "*" + i +" = " + tong);
+        }
+    }
+
+
 }
